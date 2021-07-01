@@ -1,45 +1,42 @@
 # Universita
-- id 
-- nome
-- dipartimenti
+- id  BIGINT AUTOINCREMENT INDEX UNIQUE NOTNULL
+- nome VARCHAR(50) NOTNULL
 
 
 # Dipartimenti
-- id
-- nome dipartimento
-- corsi di laurea
+- id BIGINT AUTOINCREMENT INDEX UNIQUE NOTNULL
+- nome dipartimento VARCHAR(50) NOTNULL UNIQUE
+- corsi di laurea VARCHAR(50) NOTNULL UNIQUE
 
 # Corsi di laurea
-- id
-- durata corso
-- nome 
-- tipo di corso
-- studenti
+- id BIGINT AUTOINCREMENT INDEX UNIQUE NOTNULL
+- inizio corso DATE NOTNULL
+- fine corso DATE NOTNULL
+- nome VARCHAR(50) NOTNULL
 
 # Tipo di corso
-- id
-- nome corso
-- insegnanti
-- esami
+- id BIGINT AUTOINCREMENT INDEX UNIQUE NOTNULL
+- nome corso VARCHAR(50) NOTNULL
+- insegnanti (!)
+- esami (!)
 
 # Insegnanti
-- id
-- nome
-- cognome
+- id BIGINT AUTOINCREMENT INDEX UNIQUE NOTNULL
+- nome VARCHAR(50) NULL
+- cognome VARCHAR(50) NULL
 
 # Studenti
-- id
-- nome 
-- cognome
-- email
-- numero matricola
-- esami partecipati
-- voti esami
+- id BIGINT AUTOINCREMENT INDEX UNIQUE NOTNULL
+- nome VARCHAR(50) NOTNULL
+- cognome VARCHAR(50) NOTNULL
+- email VARCHAR(50) NULL
+- numero matricola CHAR(15) NOTNULL
+- esami partecipati TINYINT NULL
 
 # esami
-- id
-- nome
-- valutazione
+- id BIGINT AUTOINCREMENT INDEX UNIQUE NOTNULL
+- nome VARCHAR(50) NOTNULL
+- valutazione TINYINT NULL
 
 
 
