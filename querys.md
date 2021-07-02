@@ -12,5 +12,5 @@ SELECT * FROM `degrees` WHERE level = 'magistrale'
 
 SELECT * FROM `departments` WHERE id   <dodici dipartimenti totali>
 
-SELECT * FROM `teachers` WHERE `phone` IS NULL <ventinove totali>
+SELECT * FROM `teachers` WHERE `phone` IS NULL <cinquanta totali>
 
