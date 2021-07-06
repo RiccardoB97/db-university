@@ -17,6 +17,15 @@ if($connection && $connection->connect_error){
 $query = "SELECT * FROM courses";
 $result = $connection->query($query);
 
+if($result && $result->num_rows > 0){
+    while($course = $results->fetch_assoc()){
+        ?>
+    <h1><?= $course['name']; ?></h1>
 
+    <?php
+    }
+}
+
+$connection->close;
 
 ?>
