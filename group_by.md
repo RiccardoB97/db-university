@@ -23,6 +23,7 @@ FROM degrees
 JOIN departments
 ON degrees.department_id = departments.id
 WHERE departments.name = 'Dipartimento di Neuroscienze'
+AND degrees.level = 'magistrale'
 
 
 SELECT courses.id, courses.name, courses.description, courses.year, courses.cfu
